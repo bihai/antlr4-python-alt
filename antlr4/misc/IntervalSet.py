@@ -13,7 +13,7 @@ class Interval(object):
         self.range = xrange(start, stop)
 
     def __contains__(self, item):
-        return item in self.range
+        return self.start <= item < self.stop
     
     def __len__(self):
         return self.stop - self.start
